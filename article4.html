@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DineinClub</title>
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Title of the project" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <!--Replace with the current website url-->
+    <meta property="og:image" content="" />
+    <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css" /> -->
+    <link rel="stylesheet" href="./css/tailwind-build.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #202737;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .pricing-container {
+            text-align: center;
+            padding: 20px;
+        }
+        .pricing-container h1 {
+            margin-bottom: 80px;
+        }
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: #2c3445;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .card h3 {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .card ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .card ul li::before {
+            content: '✔';
+            color: #00d09c;
+            margin-right: 10px;
+        }
+        .card .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #202737;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .card .button:hover {
+            background-color: #1e90ff;
+        }
+        .highlight {
+            border: 2px solid #4a90e2;
+        }
+        .highlight::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4a90e2;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+  </head>
+  <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-black tw-text-white">
+    <header class="tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] lg:tw-justify-around">
+      <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px]" href="">
+        <img src="./assets/logo/logo.png" alt="logo" class="tw-object tw-h-full tw-w-full" />
+      </a>
+      <span class="tw-text-light-gray tw-font-bold tw-text-xl tw-ml-2 tw-flex tw-items-center"><b>DineinClub</b></span>
+      <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+        <div class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+          <a class="header-links" href="index.html"><b> Home </b></a>
+          <a class="header-links" href="index.html#features"><b> Features </b></a>
+          <a class="header-links" href="index.html#pricing"><b> Pricing </b></a>
+          <a class="header-links" href="blog.html"><b> Blog </b></a>
+          <a class="header-links" href="tryitnow.html"><b> Try It Now </b></a>
+        </div>
+        <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center">
+          <a href="contact.html" aria-label="signup" class="tw-rounded-full tw-bg-white tw-px-3 tw-py-2 tw-text-black tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2">
+            <span><b>Contact Us</b></span>
+            <i class="bi bi-phone"></i>
+          </a>
+        </div>
+      </div>
+      <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-white lg:tw-hidden" onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+    </header> <br> <br>
+    <section class="tw-mt-5 tw-flex tw-min-h-[80vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[2%] max-lg:tw-p-3">
+  <h2 class="reveal-up tw-text-center tw-text-4xl tw-font-medium max-md:tw-text-2xl"> Premium Dining Experiences with DineinClub </h2>
+
+  <div class="article-container tw-w-full tw-max-w-[850px] tw-bg-[#2c3445] tw-p-5 tw-rounded-md tw-shadow-md">
+    <h2 class="tw-text-xl tw-font-bold tw-mb-3"></h2>
+    <br><br>
+    <p class="tw-text-base tw-text-gray-300 tw-mb-4">
+      <b>Introduction</b><br><br>
+  Customers today seek more than just good food they want a memorable dining experience. DineinClub helps you create that premium experience through advanced technology and thoughtful design.
+  <br><br>
+  <b>What Makes the Experience Premium?</b><br><br>
+
+<b> * Rich Visual Appeal </b>
+High-quality images and interactive digital menus set the tone for a luxurious dining experience.
+
+<br><br><b>* Ease of Use: </b>
+Intuitive interfaces make it easy for customers to browse and order, enhancing convenience.
+
+<br><br><b>* Customizable Features: </b>
+Personalize menus, designs, and offerings to align with your restaurant’s unique style.
+
+<br><br><b>* Global Standards:  </b>
+Offer an international-quality experience that appeals to both local and global audiences.
+
+<br><br><b> How DineinClub Stands Out </b>
+
+<br>* Premium website and menu designs that reflect your brand’s identity.
+
+<br>* Advanced tools to enhance customer engagement and retention.
+
+<br>* Secure cloud backup to ensure data reliability and safety.
+
+<br><br>  <b> Conclusion </b> <br>
+Elevate your restaurant’s reputation and create unforgettable dining moments with DineinClub. Embrace innovation and provide the premium experience your customers deserve.
+</p>
+
+  </div>
+</section>
+
+<section class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]">
+  <h3 class="tw-text-4xl tw-font-medium tw-text-gray-300 max-md:tw-text-2xl"> Faq </h3>
+  <div class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4">
+    <div class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
+      <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+        <span> What is a digital menu, and how does it work?</span>
+        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+      </div>
+      <div class="content"> A digital menu is an online version of a restaurant's menu, accessible through a website, app, or QR code. Customers can view the menu, customize their orders, and even place them directly from their devices. </div>
+    </div>
+    <div class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
+      <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+        <span>Can I access the digital menu without downloading an app?</span>
+        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+      </div>
+      <div class="content"> Yes, the digital menus are accessible via QR codes or direct links, so you don’t need to download any app. Just scan the code or click the link to view the menu instantly.</a>
+      </div>
+    </div>
+    <div class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
+      <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+        <span>Can I see detailed descriptions and images of dishes on the digital menu?</span>
+        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+      </div>
+      <div class="content"> Yes, digital menus often include detailed descriptions, ingredients, and images of dishes to help you make the best choice.</a>
+      </div>
+    </div>
+    <div class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
+      <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+        <span>What if the digital menu doesn’t load or has issues?</span>
+        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+      </div>
+      <div class="content">If the menu doesn’t load, check your internet connection or refresh the page. If the issue persists, inform the restaurant staff for assistance.</a>
+      </div>
+    </div>
+    <div class="faq tw-w-full tw-rounded-md tw-border-[1px] tw-border-solid tw-border-[#1F2123] tw-bg-[#080808]">
+      <div class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
+        <span>Can I view the digital menu in my preferred language?</span>
+        <i class="bi bi-plus tw-ml-auto tw-font-semibold"></i>
+      </div>
+      <div class="content">The digital menus offer language options, allowing you to switch to your preferred language for easier navigation.</a>
+      </div>
+    </div>
+  </div>
+  <div class="tw-mt-20 tw-flex tw-flex-col tw-place-items-center tw-gap-4">
+    <div class="tw-text-3xl max-md:tw-text-2xl"> Still have questions? </div>
+    <a href="#" class="btn !tw-rounded-full !tw-border-[1px] !tw-border-solid !tw-border-gray-300 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"> Contact Us</a>
+  </div>
+</section>
+<section class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%] max-md:tw-px-2">
+  <div class="signup-img-section tw-h-[550px] tw-flex max-lg:tw-flex-col tw-max-h-[550px] tw-max-w-[100%]  max-lg:tw-max-h-fit max-lg:tw-h-full max-lg:tw-max-w-full tw-overflow-hidden tw-rounded-xl tw-w-full">
+     <img src="./assets/images/home/darkbg.png" alt="background"
+                 class="tw-w-full tw-h-full">
+ <div class="tw-flex tw-w-full tw-h-full max-lg:tw-place-items-center max-lg:tw-flex-col tw-place-content-center  tw-overflow-hidden">
+
+  </div>
+</section>
+
+<footer class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] tw-text-white max-md:tw-flex-col">
+  <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full">
+    <img src="./assets/logo/logo.png" alt="logo" srcset="" class="tw-max-w-[120px]" />
+    <div> DineinClub <br /> Kerala, India </div>
+    <div class="tw-mt-3 tw-text-lg tw-font-semibold">Follow us</div>
+    <div class="tw-flex tw-gap-4 tw-text-2xl">
+      <a href="" aria-label="Facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://twitter.com/" aria-label="Twitter">
+        <i class="bi bi-twitter"></i>
+      </a>
+      <a href="https://instagram.com/" class="tw-h-[40px] tw-w-[40px]" aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+    </div>
+  </div>
+  <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+    <h2 class="tw-text-3xl max-md:tw-text-xl">Company</h2>
+    <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+      <a href="index.html#features" class="footer-link">Use cases</a>
+      <a href="#" class="footer-link">Integrations</a>
+      <a href="#" class="footer-link">Change logs</a>
+      <a href="blog.html" class="footer-link">Blogs</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+  </div>
+  <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+    <h2 class="tw-text-3xl max-md:tw-text-xl">Resources</h2>
+    <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+      <a href="index.html#hero-section" class="footer-link">About us</a>
+      <a href="index.html#faq" class="footer-link">FAQ</a>
+      <a href="contact.html" class="footer-link">Contact Us</a>
+      <a href="blog.html" class="footer-link">Blogs</a>
+      <a href="#" class="footer-link">Privacy policy</a>
+    </div>
+    Copyright © 2025 DineinClub. All Rights Reserved.
+  </div>
+
+</footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./index.js"></script>
+</html>
