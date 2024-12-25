@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <meta http-equiv="refresh" content="60">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+      <div class="header-container">
+          <div class="banner-wrapper">
+              <img src="bg.jpg" alt="Restaurant Banner" class="banner">
+              <div class="overlay"><br>
+                  <h2 class="restaurant-name">Restaurant Name</h2><br>
+                  <p class="location">📍 Building Name, Locality, City, Landmark</p>
+                  <p class="contact">📞 +91 12345678910</p>
+              </div>
+          </div>
+          <div class="theme-toggle" id="theme-toggle">
+              <div class="toggle-icon sun">☀️</div>
+              <div class="toggle-icon moon">🌙</div>
+          </div>
+      </div>
+  </header><br>
+    <center><h2 class="restaurant-name">Menu</h2></center>
+
+    <div id="sort-dropdowns">
+    <label for="sort-by-menu">Menu:</label>
+    <select id="sort-by-menu">
+        <option value="NIL">NIL</option>
+    </select>
+
+    <label for="sort-by-category">Category:</label>
+    <select id="sort-by-category">
+        <option value="NIL">NIL</option>
+    </select>
+
+    <label for="sort-by-cuisine">Cuisine:</label>
+    <select id="sort-by-cuisine">
+        <option value="NIL">NIL</option>
+    </select>
+
+    <label for="sort-by-diet">Diet:</label>
+    <select id="sort-by-diet">
+        <option value="NIL">NIL</option>
+    </select>
+    </div>
+
+    <!-- Menu Section -->
+    <section id="menu-section">
+        <!-- Menu items will be injected here via JavaScript -->
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2025 <a href="https://dineinclub.in/" style="color: #8ebf42"> DineinClub</a>. All Rights Reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
